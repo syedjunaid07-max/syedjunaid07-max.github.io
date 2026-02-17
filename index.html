@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syed Abubakar Siddiq - Portfolio</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+/* Smooth scroll */
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f1c9;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+}
+
+.logo{
+    font-weight:700;
+    font-size:22px;
+    color:#0b0b63;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#0b0b63;
+    font-weight:500;
+}
+
+/* Hero Section */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:50px 8%;
+    min-height:85vh;
+}
+
+.hero-text h3{
+    color:#0b0b63;
+}
+
+.hero-text h1{
+    font-size:65px;
+    font-weight:800;
+    color:#0b0b63;
+}
+
+.hero-text p{
+    margin-top:15px;
+    font-size:18px;
+    color:#333;
+    max-width:520px;
+}
+
+/* Button */
+.btn{
+    margin-top:30px;
+    display:inline-block;
+    padding:12px 25px;
+    background:#e6de6c;
+    color:#000;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:4px 4px 0px #c9c24f;
+}
+
+/* Image */
+.hero-img img{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    object-fit:cover;
+    border:10px solid #e6de6c;
+}
+
+/* Skills Section */
+.skills{
+    background:#ffffff;
+    padding:80px 8%;
+}
+
+.skills h2{
+    text-align:center;
+    font-size:40px;
+    color:#0b0b63;
+    margin-bottom:50px;
+}
+
+.skill-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.skill-box{
+    background:#f4f1c9;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.skill-box:hover{
+    transform:translateY(-10px);
+}
+/* Education Section (Same style as Skills) */
+.education{
+    background:#ffffff;
+    padding:80px 8%;
+}
+
+.education h2{
+    text-align:center;
+    font-size:40px;
+    color:#0b0b63;
+    margin-bottom:50px;
+}
+
+.edu-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.edu-box{
+    background:#f4f1c9;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.edu-box:hover{
+    transform:translateY(-10px);
+}
+
+.skill-box h3{
+    color:#0b0b63;
+    margin-bottom:15px;
+}
+
+/* Mobile */
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+/* Projects Section */
+.projects{
+    background:#ffffff;
+    padding:80px 8%;
+}
+
+.projects h2{
+    text-align:center;
+    font-size:40px;
+    color:#0b0b63;
+    margin-bottom:50px;
+}
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.project-box{
+    background:#f4f1c9;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.project-box:hover{
+    transform:translateY(-10px);
+}
+
+.project-box h3{
+    color:#0b0b63;
+    margin-bottom:15px;
+}
+/* Certifications Section */
+.certifications{
+    background:#ffffff;
+    padding:80px 8%;
+}
+
+.certifications h2{
+    text-align:center;
+    font-size:40px;
+    color:#0b0b63;
+    margin-bottom:50px;
+}
+
+.cert-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.cert-box{
+    background:#f4f1c9;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.cert-box:hover{
+    transform:translateY(-10px);
+}
+
+.cert-box h3{
+    color:#0b0b63;
+    margin-bottom:10px;
+}
+  /* Footer Section */
+.footer{
+    background:#0b0b63;
+    color:#fff;
+    padding:40px 8%;
+    text-align:center;
+}
+
+.footer h2{
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.footer p{
+    margin:6px 0;
+    font-size:16px;
+}
+
+.footer a{
+    color:#e6de6c;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    text-decoration:underline;
+}
+/* Resume Popup */
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.popup-content{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    width:300px;
+}
+
+.popup-btn{
+    display:inline-block;
+    margin:10px;
+    padding:10px 20px;
+    background:#e6de6c;
+    color:black;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:600;
+}
+
+.popup-btn:hover{
+    background:#d6cd55;
+}
+
+.close-btn{
+    margin-top:15px;
+    padding:8px 15px;
+    background:#0b0b63;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo"></div>
+    <ul>
+        <li><a href="#">Home</a></li>
+
+        
+        <li><a href="#skills">Skills</a></li>
+
+        <li><a href="#education">Education</a></li>
+
+        <li><a href="#projects">Project</a></li>
+
+        <li><a href="#certifications">Certifications</a></li>
+
+        
+
+
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h3>Hello, I'm</h3>
+        <h1>Syed Abubakar Siddiq</h1>
+        <p>
+        Software Developer <br>
+        To pursue a challenging career in the field of Computer Applications
+        where I can utilize my technical knowledge, problem-solving skills,
+        and creativity to contribute to organization’s success.
+        </p>
+
+       <a href="#" class="btn" onclick="openResume()">Resume</a>
+    </div>
+
+    <div class="hero-img">
+        <img src="ko.jpeg" alt="Profile Photo">
+    </div>
+</section>
+
+<!-- Skills Section (Same Page) -->
+<section class="skills" id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skill-container">
+
+        <div class="skill-box">
+            <h3>Cybersecurity</h3>
+            <p>Ethical hacking basics, network security, and threat analysis.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>Cloud Computing</h3>
+            <p>Cloud architecture, deployment models, and scalable systems.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>Programming</h3>
+            <p>Java, Python, and C++ with strong OOP knowledge.</p>
+        </div>
+
+        <div class="skill-box">
+            <h3>Core Competencies</h3>
+            <p>Problem-solving, teamwork, adaptability, and quick learning.</p>
+        </div>
+
+    </div>
+</section>
+<!-- Education Section -->
+<section class="education" id="education">
+
+    <h2>My Education</h2>
+
+    <div class="edu-container">
+
+        <div class="edu-box">
+            <h3>SSLC</h3>
+            <p>Completed Secondary School Education.</p>
+        </div>
+
+        <div class="edu-box">
+            <h3>2nd PUC</h3>
+            <p>Completed Pre-University Education.</p>
+        </div>
+
+        <div class="edu-box">
+            <h3>BCA</h3>
+            <p>Pursuing Bachelor of Computer Applications.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="project-container">
+
+        <div class="project-box">
+            <h3>Academic Programming & Cybersecurity Projects</h3>
+            <p>
+            Participated in academic projects related to programming and cybersecurity,
+            applying secure coding and problem-solving techniques.
+            </p>
+        </div>
+
+        <div class="project-box">
+            <h3>Kali Linux Security Lab</h3>
+            <p>
+            Hands-on experience using Kali Linux, ethical hacking tools, and
+            performing basic network security analysis in lab environments.
+            </p>
+        </div>
+
+        
+
+        <div class="project-box">
+            <h3>Payload Attack Simulation</h3>
+            <p>
+            Performed payload-based attack simulations in a controlled LAN setup
+            to study malware behavior and security defense mechanisms.
+            </p>
+        </div>
+
+        <div class="project-box">
+            <h3>CI/CD Pipeline – GitHub to AWS S3</h3>
+            <p>
+            Developed a GitHub-to-AWS S3 CI/CD pipeline using AWS CodePipeline
+            for automated website deployment.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<!-- Certifications Section -->
+<section class="certifications" id="certifications">
+
+    <h2>My Certifications</h2>
+
+    <div class="cert-container">
+
+        <div class="cert-box">
+            <h3>Cybersecurity Certification</h3>
+            <p>Completed training in cybersecurity fundamentals and threat awareness.</p>
+        </div>
+
+        <div class="cert-box">
+            <h3>AWS & Azure Basics</h3>
+            <p>Understanding of cloud platforms, deployment models, and services.</p>
+        </div>
+
+        <div class="cert-box">
+            <h3>Diploma in MS Excel</h3>
+            <p>Advanced Excel skills including data analysis, formulas, and reporting.</p>
+        </div>
+
+        <div class="cert-box">
+            <h3>FPC by Team Everest</h3>
+            <p>Completed Foundation Program Certification focusing on professional skills.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Footer / Contact Section -->
+<footer class="footer">
+    <h2>Contact Me</h2>
+
+    <p><strong>Name:</strong> Syed Abubakar Siddiq</p>
+    <p><strong>Phone:</strong> 6360776327</p>
+    <p><strong>Email:</strong> 
+        <a href="mailto:abus76416@gmail.com">abus76416@gmail.com</a>
+    </p>
+    <p><strong>Location:</strong> Bangalore, India</p>
+
+    <p style="margin-top:20px;">© 2026 Syed Abubakar Siddiq | Portfolio</p>
+</footer>
+
+
+<!-- Resume Popup -->
+<div id="resumePopup" class="popup">
+    <div class="popup-content">
+        <h3>Resume Options</h3>
+        <p>Select an action:</p>
+
+        <a href="resume.pdf.pdf" target="_blank" class="popup-btn">View</a>
+        <a href="resume.pdf.pdf" download class="popup-btn">Download</a>
+
+        <br>
+        <button onclick="closeResume()" class="close-btn">Cancel</button>
+    </div>
+</div>
+<script>
+function openResume(){
+    document.getElementById("resumePopup").style.display="flex";
+}
+
+function closeResume(){
+    document.getElementById("resumePopup").style.display="none";
+}
+</script>
+</body>
+</html>
